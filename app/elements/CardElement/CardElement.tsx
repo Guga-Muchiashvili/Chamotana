@@ -10,7 +10,7 @@ const CardElement = ({item} : any) => {
     <div className='w-full flex flex-col h-72 bg-gray-100 rounded-xl text-sm overflow-hidden' style={{boxShadow : "2px 2px 5px 1px green"}}>
         <div className='w-full h-1/5 flex border-b-[1px] border-green-500'>
             {CardDisplays.map((item) => (
-                <div className='w-1/6 text-center text-3xl font-semibold py-2 font-sans'>{item}</div>
+                <div key={item} className='w-1/6 text-center text-3xl font-semibold py-2 font-sans'>{item}</div>
             ))}
         </div>
         <div className='w-full h-4/5 flex'>
