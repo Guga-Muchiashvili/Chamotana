@@ -20,7 +20,7 @@ const DropDownElementCountry = ({ control, id, data }: any) => {
         render={({ field: { onChange, value, ref, name, onBlur } }) => {
           return (
             <Select
-              className="w-full h-full"
+              className="w-full h-full outline-none"
               value={value !== undefined ? value : ''}
               defaultValue={"Select Country"}
               name={id}

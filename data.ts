@@ -18,26 +18,6 @@ const data = [
               "delay": 14
             }
           ]
-        },
-        {
-          "country": "USA",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 8.85,
-              "delay": 12
-            }
-          ]
-        },
-        {
-          "country": "TURKEY",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 2.85,
-              "delay": 7
-            }
-          ]
         }
       ]
     },
@@ -53,26 +33,6 @@ const data = [
               "method": "AIR",
               "price": 9.45,
               "delay": 14
-            }
-          ]
-        },
-        {
-          "country": "TURKEY",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 2.4,
-              "delay": 6
-            }
-          ]
-        },
-        {
-          "country": "United Kingdom",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 6.2,
-              "delay": 12
             }
           ]
         }
@@ -114,26 +74,6 @@ const data = [
               "delay": 14
             }
           ]
-        },
-        {
-          "country": "USA",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 12.5,
-              "delay": 12
-            }
-          ]
-        },
-        {
-          "country": "TURKEY",
-          "methods": [
-            {
-              "method": "AIR",
-              "price": 4,
-              "delay": 7
-            }
-          ]
         }
       ]
     }
@@ -161,3 +101,5 @@ const data = [
   ]
 
   export const methodData = ['Air', 'Ground', 'Sea' ]
+
+  export const CardDisplays = ['Company','Country', 'Method',  'Delivery', 'Price', 'Delivery time']

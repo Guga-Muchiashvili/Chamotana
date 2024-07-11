@@ -13,11 +13,10 @@ const DropDownElementMethod = ({ control, id, data, placeholder }: any) => {
             <>
               <Select
                 labelId="demo-simple-select-standard-label"
-                className="w-full h-full"
+                className="w-full h-full outline-none"
                 value={value !== undefined ? value : ''}
                 name={id}
                 id={id}
-                label={id}
                 onChange={(e) => onChange(e.target.value)}
               >
                 {data.map((item: any) => (
