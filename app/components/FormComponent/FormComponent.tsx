@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import schema from './schema'
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
@@ -9,6 +9,7 @@ import { methodData } from '@/data';
 import { countryData } from '@/data';
 import DropDownElementMethod from '@/app/elements/dropdownElementMethod/DropDownElementMethods';
 import TextInputElement from '@/app/elements/textinputElement/TextInputElement';
+import { getDeliveryData } from '@/actions/actions';
 
 const FormComponent = () => {
   const {
@@ -20,21 +21,31 @@ const FormComponent = () => {
     resolver: yupResolver(schema),
   });
 
-  const submit = (e : any) => {
-    console.log(e)
+  const defaultValue : ISearchForm = {
+    country : "China",
+    method : "Air"
   }
+
+  useEffect(() => {
+    reset(defaultValue)
+  },[])
+  
+  const submit = async (e : any) => {
+    console.log(e)
+    const ml = await getDeliveryData()
+    console.log(ml)
+  }
+
+  console.log('xula')
   
   return (
-    <form className='w-full flex h-16 bg-white rounded-full overflow-hidden' onSubmit={handleSubmit(submit)}>
+    <form className='w-full flex h-16 bg-white rounded-full' onSubmit={handleSubmit(submit)}>
       <DropDownElementCountry control={control} id={'country'} data={countryData}/>
       <DropDownElementMethod placeholder={'Enter Method'} control={control} id={'method'} data={methodData}/>
       <DropDownElementMethod placeholder={'sort by'} control={control} id={'sortby'} data={['Sort By $', 'Sort by delivery time']}/>
-      {/* <TextInputElement placeholder={'enter amount of days'} control={control} id={'time'}/>
-      <TextInputElement placeholder={'enter maximum price $'} control={control} id={'price'}/> */}
-
-      <button className='w-1/4 bg-green-500 text-white ' type='submit'>Submit</button>
+      <button className='w-1/4 bg-[#4FC0E0] rounded-r-full text-white text-2xl hover:bg-opacity-80 duration-300 ease-in  ' type='submit'>მოძებნა</button>
     </form>
   )
 }
 
-export default FormComponent
+export default React.memo(FormComponent)

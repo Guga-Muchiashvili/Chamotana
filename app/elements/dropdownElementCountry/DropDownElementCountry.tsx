@@ -7,6 +7,7 @@ import { MenuItem, Select } from "@mui/material";
 const DropDownElementCountry = ({ control, id, data }: any) => {
   const [selectedItem, setSelectedItem] = useState<null | any>(null);
 
+  console.log(selectedItem)
   const handleChange = (value: any) => {
     const item = data.find((item: any) => item.name === value);
     setSelectedItem(item);
@@ -20,12 +21,11 @@ const DropDownElementCountry = ({ control, id, data }: any) => {
         render={({ field: { onChange, value, ref, name, onBlur } }) => {
           return (
             <Select
-              className="w-full h-full outline-none"
+              className="w-full h-full outline-none rounded-l-full border-[0.4px] rounded-none border-[#4FC0E0]"
               value={value !== undefined ? value : ''}
               defaultValue={"Select Country"}
               name={id}
               id={id}
-              label={id}
               onChange={(e) => {
                 onChange(e.target.value)
                 handleChange(e.target.value)
