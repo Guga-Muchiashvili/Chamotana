@@ -11,7 +11,7 @@ const CardElement = ({ item }: any) => {
   );
   return (
     <div
-      className="w-full flex flex-col h-60 bg-gray-100 rounded-2xl text-sm overflow-hidden"
+      className="w-full flex flex-col h-64 bg-gray-100 rounded-2xl text-sm overflow-hidden"
       style={{ boxShadow: "2px 2px 5px 1px gray" }}
     >
       <div className="w-full h-2/6 justify-center items-center flex border-b-[2px] border-[#68A0AF]">
@@ -34,19 +34,19 @@ const CardElement = ({ item }: any) => {
         />
         {item.services.map((item: any) => (
           <>
-            <div className="w-1/6  justify-center items-center font-bold text-3xl text-green-600 text-center h-full flex">
+            <div className="w-1/6  justify-center items-center font-normal opacity-90 text-3xl text-[#1C1C1C] text-center h-full flex">
               <h2>{item.country}</h2>
             </div>
-            <div className="w-1/6  justify-center items-center font-bold text-3xl text-green-600 text-center h-full flex">
+            <div className="w-1/6  justify-center items-center font-normal opacity-90 text-3xl text-[#1C1C1C] text-center h-full flex">
               <h2>{item.methods[0].method}</h2>
             </div>
-            <div className="w-1/6  justify-center items-center font-bold text-3xl text-green-600 text-center h-full flex">
+            <div className="w-1/6  justify-center items-center font-normal opacity-90 text-3xl text-[#1C1C1C] text-center h-full flex">
               <h2>უფასო</h2>
             </div>
-            <div className="w-1/6  justify-center items-center font-bold text-3xl text-green-600 text-center h-full flex">
+            <div className="w-1/6  justify-center items-center font-normal opacity-90 text-3xl text-[#1C1C1C] text-center h-full flex">
               <h2>{item.methods[0].price} $</h2>
             </div>
-            <div className="w-1/6  justify-center items-center font-bold text-3xl text-green-600 text-center h-full flex">
+            <div className="w-1/6  justify-center items-center font-normal opacity-90 text-3xl text-[#1C1C1C] text-center h-full flex">
               <h2>{item.methods[0].delay} Days</h2>
             </div>
           </>

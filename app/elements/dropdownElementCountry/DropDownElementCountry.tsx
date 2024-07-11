@@ -5,7 +5,16 @@ import { useState } from "react";
 import { MenuItem, Select } from "@mui/material";
 
 const DropDownElementCountry = ({ control, id, data }: any) => {
-  const [selectedItem, setSelectedItem] = useState<null | any>(null);
+  const [selectedItem, setSelectedItem] = useState<null | any>({
+    img: {
+      blurHeight: 0,
+      blurWidth: 0,
+      height: 480,
+      src: "/_next/static/media/china.7fd9bbb9.svg",
+      width: 640
+  },
+    name: "China"
+});
 
   console.log(selectedItem)
   const handleChange = (value: any) => {
