@@ -23,7 +23,7 @@ const DropDownElementCountry = ({ control, id, data }: any) => {
   };
 
   return (
-    <div className="flex items-center h-full w-1/4 relative ">
+    <div className="flex items-center h-full w-1/3 relative ">
       <Controller
         control={control}
         name={id}

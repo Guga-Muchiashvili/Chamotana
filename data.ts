@@ -100,7 +100,7 @@ const data = [
     },
   ]
 
-  export const methodData = ['Air', 'Ground', 'Sea' ]
+  export const methodData = ['AIR', 'ROAD', 'WATER' ]
 
   export const CardDisplays = ['კომპანია','ქვეყანა', 'მეთოდი',  'მიწოდება', 'ფასი', 'მოტანის დრო']
   

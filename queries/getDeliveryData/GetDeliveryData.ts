@@ -1,12 +1,14 @@
-import { getDelivertData } from "@/actions/actions";
+
+import { getDeliveryData } from "@/actions/actions";
 import { useQuery } from "@tanstack/react-query";
 
 
-const CreditswithMovide = (id: string | undefined, type : string | undefined) => {
+const getCountryDataQuery = ({countrie} : {countrie : string | undefined}) => {
+  console.log('countrie', countrie)
     return useQuery<any>({
-      queryFn: () => getDelivertData(),
-      queryKey: ['getDelivertData',id],
+      queryFn: () => getDeliveryData({countrie}),
+      queryKey: ['getDelivertData',countrie || ''],
     });
   };
   
-  export default CreditswithMovide;
+  export default getCountryDataQuery;
