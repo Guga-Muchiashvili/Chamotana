@@ -12,7 +12,7 @@ import CreditswithMovide from '@/queries/getDeliveryData/GetDeliveryData';
 import DropDownElementMethod from '@/app/elements/dropdownElementMethod/DropDownElementMethods';
 import getCountryDataQuery from '@/queries/getDeliveryData/GetDeliveryData';
 
-const FormComponent = ({getData} : any) => {
+const FormComponent = ({getData} : {getData : (data : ICompany, method : string | undefined) => void}) => {
   const {
     handleSubmit,
     control,
@@ -41,21 +41,10 @@ const FormComponent = ({getData} : any) => {
     reset(defaultValue);
   }, []);
 
-  const submit = async (e: ISearchForm) => {
-    console.log(e);
-    try {
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-
   return (
-    <form className='w-full flex justify-center h-16 bg-white rounded-full' onSubmit={handleSubmit(submit)}>
-      <DropDownElementCountry control={control} id={'country'} data={countryData} />
+    <form className='w-full flex justify-center h-16 bg-white rounded-full'>
+      <DropDownElementCountry control={control} id={'country'} data={countryData as any} />
       <DropDownElementMethod placeholder={'Enter Method'} control={control} id={'method'} data={methodData} />
-      {/* <DropDownElementMethod placeholder={'sort by'} control={control} id={'sortby'} data={['Sort By $', 'Sort by delivery time']} />
-      <button className='w-1/4 bg-[#4FC0E0] rounded-r-full text-white text-2xl hover:bg-opacity-80 duration-300 ease-in' type='submit'>მოძებნა</button> */}
     </form>
   );
 };

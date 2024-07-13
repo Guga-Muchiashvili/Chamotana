@@ -4,7 +4,7 @@ import { Select, MenuItem, InputLabel } from "@mui/material";
 
 const DropDownElementMethod = ({ control, id, data, placeholder }: any) => {
   return (
-    <div className="flex items-center h-full w-1/3  relative">
+    <div className="flex items-center h-full w-1/2 md:w-1/3  relative">
       <Controller
         control={control}
         name={id}

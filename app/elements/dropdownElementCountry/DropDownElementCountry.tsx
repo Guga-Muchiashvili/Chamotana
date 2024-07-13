@@ -4,8 +4,8 @@ import { Controller } from "react-hook-form";
 import { useState } from "react";
 import { MenuItem, Select } from "@mui/material";
 
-const DropDownElementCountry = ({ control, id, data }: any) => {
-  const [selectedItem, setSelectedItem] = useState<null | any>({
+const DropDownElementCountry = ({ control, id, data }: {control : any, id : string, data : ImageData[]}) => {
+  const [selectedItem, setSelectedItem] = useState<any | undefined>({
     img: {
       blurHeight: 0,
       blurWidth: 0,
@@ -16,14 +16,16 @@ const DropDownElementCountry = ({ control, id, data }: any) => {
     name: "China"
 });
 
+console.log(selectedItem)
+
   console.log(selectedItem)
-  const handleChange = (value: any) => {
-    const item = data.find((item: any) => item.name === value);
+  const handleChange = (value: string) => {
+    const item = data.find((item) => item.name === value);
     setSelectedItem(item);
   };
 
   return (
-    <div className="flex items-center h-full w-1/3 relative ">
+    <div className="flex items-center h-full w-1/2 md:w-1/3 relative ">
       <Controller
         control={control}
         name={id}
