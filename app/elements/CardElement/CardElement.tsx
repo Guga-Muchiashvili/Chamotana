@@ -5,13 +5,9 @@ import usa2 from "../../../public/usa2.png";
 import { CardDisplays } from "@/data";
 
 const CardElement = ({ item } : {item : ICompany}) => {
-  // console.log(
-  //   "ms",
-  //   item?.services[0]?.methods.map((item: any) => console.log(item))
-  // );
   return (
     <div
-      className="w-full relative md:p-0 flex-row h-fit px-6 py-3 pb-12 md:pb-3 md:pr-24 md:pb-0 flex md:flex-col md:h-64 bg-gray-100 rounded-xl text-sm overflow-hidden"
+      className="w-full relative md:p-0 flex-row h-fit px-6 py-3 pb-12  md:pr-24 md:pb-0 flex md:flex-col md:h-64 bg-gray-100 rounded-xl text-sm overflow-hidden"
       style={{ boxShadow: "2px 2px 5px 1px gray" }}
     >
       <div className="w-full flex-col gap-5 pr-4 md:p-0 md:flex-row h-full items-start md:h-2/6 justify-center md:items-center flex border-r-[2px] md:border-r-0 md:border-b-[2px] border-[#68A0AF]">
